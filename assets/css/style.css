@@ -387,26 +387,44 @@ body.dark.menu-open .burger .burger__close.theme-icon--dark {
   justify-content: center;
   gap: 8px;
 
-  background: #e1d4c9;
-  color: #403f3d;
+  border-radius: 100px;
 
-  border-radius: var(--border-radius-round);
-
+  font-size: 16px;
   font-weight: 600;
+  line-height: 1.5;
 }
 
-body .hero__button .hero__button-icon {
+body:not(.dark) .hero__button {
+  background: #e1d4c9;
+  color: #403f3d;
+}
+
+body.dark .hero__button {
+  background: #403f3d;
+  color: #e1d4c9;
+}
+
+/*cup icon in the menu button*/
+
+.hero__button .hero__button-icon {
   display: none;
   width: 20px;
   height: 20px;
-  flex: 0 0 20px;
+}
+
+/* Hide dark theme icon by default */
+body.dark .hero__button .hero__button-icon.theme-icon--dark {
+  display: none;
 }
 
 @media (hover: hover) and (pointer: fine) {
+
+  /* light theme hover - show light icon only, button doesn't change */
   body:not(.dark) .hero__button:hover .hero__button-icon.theme-icon--light {
     display: block;
   }
 
+  /* dark theme hover - show dark icon only, button doesn't change */
   body.dark .hero__button:hover .hero__button-icon.theme-icon--dark {
     display: block;
   }
@@ -728,8 +746,27 @@ body .hero__button .hero__button-icon {
 
 .socials {
   display: flex;
-
+  
   gap: 12px;
+}
+
+.socials__icon {
+  display: block;
+
+  width: 24px;
+  height: 24px;
+
+  flex-shrink: 0;
+
+  background-color: currentColor;
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
 }
 
 .socials__link {
@@ -740,7 +777,8 @@ body .hero__button .hero__button-icon {
   align-items: center;
   justify-content: center;
 
-  border: 1px solid var(--border-light);
+  background: transparent;
+  border: 2px solid var(--border-light);
   border-radius: 50%;
 
   transition:
@@ -751,6 +789,7 @@ body .hero__button .hero__button-icon {
 .socials__link img {
   width: 24px;
   height: 24px;
+  transition: filter 0.2s ease;
 }
 
 /* Contact information */
@@ -944,14 +983,24 @@ body .hero__button .hero__button-icon {
       border-color 0.2s ease;
   }
 
-  .socials__link:hover {
+  /* Light theme hover */
+  body:not(.dark) .socials__link:hover {
     background: var(--text-light);
     border-color: var(--text-light);
   }
 
+  body:not(.dark) .socials__link:hover img {
+    filter: invert(0.95) brightness(0.65) saturate(1.2);
+  }
+
+  /* Dark theme hover */
   body.dark .socials__link:hover {
     background: var(--border-light);
-    border-color: var(--border-light);
+    border-color: var(--theme-switch-border);
+  }
+
+  body.dark .socials__link:hover img {
+    filter: none;
   }
 
   /* Footer links */
