@@ -105,7 +105,6 @@ address {
   font-style: normal;
 }
 
-
 /* COMMON */
 
 .container {
@@ -136,7 +135,6 @@ em {
   font-weight: 600;
   line-height: 1.25;
 }
-
 
 /* --- HEADER --- */
 
@@ -177,7 +175,6 @@ body.dark .logo__dark {
   display: block;
 }
 
-
 /* Navigation */
 
 .nav {
@@ -199,7 +196,6 @@ body.dark .logo__dark {
   line-height: 1.5;
 }
 
-
 /* Header controls */
 
 .header__actions {
@@ -208,7 +204,6 @@ body.dark .logo__dark {
 
   gap: 24px;
 }
-
 
 /* Theme switch */
 
@@ -271,7 +266,6 @@ body.dark .theme-icon--dark {
   display: block;
 }
 
-
 /* Menu */
 
 .menu-link {
@@ -285,7 +279,6 @@ body.dark .theme-icon--dark {
   width: 20px;
   height: 20px;
 }
-
 
 /* Burger */
 
@@ -322,31 +315,23 @@ body .burger .burger__close {
   display: none;
 }
 
-
 /* Light theme + menu closed */
-body:not(.dark):not(.menu-open)
-.burger .burger__open.theme-icon--light {
+body:not(.dark):not(.menu-open) .burger .burger__open.theme-icon--light {
   display: block;
 }
-
 
 /* Dark theme + menu closed */
-body.dark:not(.menu-open)
-.burger .burger__open.theme-icon--dark {
+body.dark:not(.menu-open) .burger .burger__open.theme-icon--dark {
   display: block;
 }
-
 
 /* Light theme + menu open */
-body:not(.dark).menu-open
-.burger .burger__close.theme-icon--light {
+body:not(.dark).menu-open .burger .burger__close.theme-icon--light {
   display: block;
 }
 
-
 /* Dark theme + menu open */
-body.dark.menu-open
-.burger .burger__close.theme-icon--dark {
+body.dark.menu-open .burger .burger__close.theme-icon--dark {
   display: block;
 }
 
@@ -410,7 +395,6 @@ body.dark.menu-open
   font-weight: 600;
 }
 
-/* Keep Menu perfectly centered when the button is not hovered. */
 body .hero__button .hero__button-icon {
   display: none;
   width: 20px;
@@ -428,7 +412,6 @@ body .hero__button .hero__button-icon {
   }
 }
 
-
 /* FAVORITE COFFEE */
 
 .favorite-coffee__container {
@@ -444,7 +427,6 @@ body .hero__button .hero__button-icon {
 
   text-align: center;
 }
-
 
 /* --- Slider --- */
 
@@ -520,7 +502,6 @@ body .hero__button .hero__button-icon {
   display: flex;
 }
 
-
 /* Coffee image */
 
 .slider__image {
@@ -531,7 +512,6 @@ body .hero__button .hero__button-icon {
 
   object-fit: contain;
 }
-
 
 /* Coffee text */
 
@@ -556,8 +536,6 @@ body .hero__button .hero__button-icon {
   line-height: 1.5;
 }
 
-
-
 /* Slider progress */
 
 .slider__controls {
@@ -577,7 +555,6 @@ body .hero__button .hero__button-icon {
 .slider__control--active {
   background: var(--slider-control-active);
 }
-
 
 /* --- ABOUT --- */
 
@@ -625,7 +602,6 @@ body .hero__button .hero__button-icon {
 
   object-fit: cover;
 }
-
 
 /* --- MOBILE APP --- */
 
@@ -704,7 +680,6 @@ body .hero__button .hero__button-icon {
   object-fit: contain;
 }
 
-
 /* --- CONTACTS / FOOTER --- */
 
 .contacts {
@@ -749,7 +724,6 @@ body .hero__button .hero__button-icon {
   line-height: 1.25;
 }
 
-
 /* Social buttons */
 
 .socials {
@@ -769,14 +743,15 @@ body .hero__button .hero__button-icon {
   border: 1px solid var(--border-light);
   border-radius: 50%;
 
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
 }
 
 .socials__link img {
   width: 24px;
   height: 24px;
 }
-
 
 /* Contact information */
 
@@ -815,13 +790,9 @@ body .hero__button .hero__button-icon {
   height: 20px;
 }
 
-
 /* --- HOVER STATES --- */
 
 @media (hover: hover) and (pointer: fine) {
-
-  /* Navigation underline */
-
   .nav a,
   .menu-link {
     position: relative;
@@ -846,74 +817,70 @@ body .hero__button .hero__button-icon {
     transform: scaleX(1);
   }
 
-
   /* Theme switch */
 
   .theme-switch {
     transition: border-color 0.2s ease;
   }
 
-/*THEME SWITCH ICON STATES */
+  /*THEME SWITCH ICON STATES */
 
-.theme-switch__sun-dark,
-.theme-switch__sun-hover,
-.theme-switch__sun-dark-hover,
-.theme-switch__moon-dark,
-.theme-switch__moon-hover {
-  display: none;
-}
-
-
-/* LIGHT THEME DEFAULT */
-
-body:not(.dark) .theme-switch__sun-light {
-  display: block;
-}
-
-body:not(.dark) .theme-switch__moon-light {
-  display: block;
-}
-
-
-/* DARK THEME DEFAULT */
-
-body.dark .theme-switch__sun-light,
-body.dark .theme-switch__moon-light {
-  display: none;
-}
-
-body.dark .theme-switch__sun-dark,
-body.dark .theme-switch__moon-dark {
-  display: block;
-}
-
-
-/* THEME SWITCH HOVER */
-
-@media (hover: hover) and (pointer: fine) {
-
-  /* Light theme: only moon changes on hover */
-  body:not(.dark) .theme-switch:hover .theme-switch__moon-light {
+  .theme-switch__sun-dark,
+  .theme-switch__sun-hover,
+  .theme-switch__sun-dark-hover,
+  .theme-switch__moon-dark,
+  .theme-switch__moon-hover {
     display: none;
   }
 
-  body:not(.dark) .theme-switch:hover .theme-switch__moon-hover {
+  /* LIGHT THEME DEFAULT */
+
+  body:not(.dark) .theme-switch__sun-light {
     display: block;
   }
 
-  /* Dark theme: only sun changes on hover */
-  body.dark .theme-switch:hover .theme-switch__sun-dark {
+  body:not(.dark) .theme-switch__moon-light {
+    display: block;
+  }
+
+  /* DARK THEME DEFAULT */
+
+  body.dark .theme-switch__sun-light,
+  body.dark .theme-switch__moon-light {
     display: none;
   }
 
-  body.dark .theme-switch:hover .theme-switch__sun-dark-hover {
+  body.dark .theme-switch__sun-dark,
+  body.dark .theme-switch__moon-dark {
     display: block;
   }
-}
+
+  /* THEME SWITCH HOVER */
+
+  @media (hover: hover) and (pointer: fine) {
+    body:not(.dark) .theme-switch:hover .theme-switch__moon-light {
+      display: none;
+    }
+
+    body:not(.dark) .theme-switch:hover .theme-switch__moon-hover {
+      display: block;
+    }
+
+    body.dark .theme-switch:hover .theme-switch__sun-dark {
+      display: none;
+    }
+
+    body.dark .theme-switch:hover .theme-switch__sun-dark-hover {
+      display: block;
+    }
+  }
+
   /* Slider arrows */
 
   .slider__arrow {
-    transition: background-color 0.2s ease, border-color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
   }
 
   .slider__arrow:hover {
@@ -921,7 +888,6 @@ body.dark .theme-switch__moon-dark {
     border-color: var(--interactive-hover-bg);
   }
 
-  /* Light theme: dark button background needs the inverse/light arrow. */
   body:not(.dark) .slider__arrow:hover .theme-icon--light {
     display: none;
   }
@@ -930,7 +896,6 @@ body.dark .theme-switch__moon-dark {
     display: block;
   }
 
-  /* Dark theme: light button background needs the dark arrow. */
   body.dark .slider__arrow:hover .theme-icon--dark {
     display: none;
   }
@@ -939,11 +904,13 @@ body.dark .theme-switch__moon-dark {
     display: block;
   }
 
-
   /* App Store / Google Play */
 
   .store-button {
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
   }
 
   .store-button:hover {
@@ -968,11 +935,13 @@ body.dark .theme-switch__moon-dark {
     display: block;
   }
 
-
   /* Social buttons */
 
   .socials__link {
-    transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      border-color 0.2s ease;
   }
 
   .socials__link:hover {
@@ -984,7 +953,6 @@ body.dark .theme-switch__moon-dark {
     background: var(--border-light);
     border-color: var(--border-light);
   }
-
 
   /* Footer links */
 
@@ -1016,8 +984,6 @@ body.dark .theme-switch__moon-dark {
 /* --- TABLET --- */
 
 @media (max-width: 768px) {
-
-  /* Theme switcher - ensure only active icons show on tablet */
   .theme-switch__sun-hover,
   .theme-switch__sun-dark-hover,
   .theme-switch__moon-hover,
@@ -1096,7 +1062,6 @@ body.dark .theme-switch__moon-dark {
     height: 40px;
   }
 
-
   /* Header */
 
   .nav,
@@ -1112,13 +1077,11 @@ body.dark .theme-switch__moon-dark {
     display: flex;
   }
 
-
   /* Hero */
 
   .hero__container {
     padding: 100px 60px;
   }
-
 
   /* About */
 
@@ -1129,7 +1092,6 @@ body.dark .theme-switch__moon-dark {
   .about__image--small {
     display: none;
   }
-
 
   /* Mobile app */
 
@@ -1146,7 +1108,6 @@ body.dark .theme-switch__moon-dark {
     align-self: center;
   }
 
-
   /* Footer */
 
   .contacts__container {
@@ -1162,11 +1123,9 @@ body.dark .theme-switch__moon-dark {
   }
 }
 
-
 /* MOBILE */
 
 @media (max-width: 600px) {
-    
   .header__container {
     padding-inline: 16px;
   }
@@ -1174,7 +1133,6 @@ body.dark .theme-switch__moon-dark {
     gap: 12px;
   }
 
-  /* Theme switcher - ensure only active icons show on mobile */
   .theme-switch__sun-hover,
   .theme-switch__sun-dark-hover,
   .theme-switch__moon-hover,
@@ -1206,7 +1164,6 @@ body.dark .theme-switch__moon-dark {
     padding-inline: 16px;
   }
 
-
   /* Headings */
 
   .section-title,
@@ -1218,7 +1175,6 @@ body.dark .theme-switch__moon-dark {
     font-size: 42px;
   }
 
-
   /* Hero */
 
   .hero__container {
@@ -1226,7 +1182,6 @@ body.dark .theme-switch__moon-dark {
 
     padding: 60px 16px;
   }
-
 
   /* Slider */
 
@@ -1243,7 +1198,6 @@ body.dark .theme-switch__moon-dark {
     height: auto;
   }
 
-
   /* Mobile app */
 
   .mobile-app__buttons {
@@ -1255,11 +1209,9 @@ body.dark .theme-switch__moon-dark {
     height: auto;
   }
 
-
   /* Footer */
 
   .contacts__container {
     padding: 60px 16px;
   }
-
 }
