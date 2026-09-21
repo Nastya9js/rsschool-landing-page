@@ -766,40 +766,15 @@ body .hero__button .hero__button-icon {
   align-items: center;
   justify-content: center;
 
-  color: #e1d4c9;
-  border: 1px solid #c1b6ad;
+  border: 1px solid var(--border-light);
   border-radius: 50%;
+
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-.socials__icon {
+.socials__link img {
   width: 24px;
   height: 24px;
-  flex: 0 0 24px;
-
-  background-color: currentColor;
-
-  -webkit-mask-repeat: no-repeat;
-  -webkit-mask-position: center;
-  -webkit-mask-size: contain;
-
-  mask-repeat: no-repeat;
-  mask-position: center;
-  mask-size: contain;
-}
-
-.socials__icon--twitter {
-  -webkit-mask-image: url("../icons/twitter.svg");
-  mask-image: url("../icons/twitter.svg");
-}
-
-.socials__icon--instagram {
-  -webkit-mask-image: url("../icons/instagram.svg");
-  mask-image: url("../icons/instagram.svg");
-}
-
-.socials__icon--facebook {
-  -webkit-mask-image: url("../icons/facebook.svg");
-  mask-image: url("../icons/facebook.svg");
 }
 
 
@@ -1001,9 +976,13 @@ body.dark .theme-switch__moon-dark {
   }
 
   .socials__link:hover {
-    color: #403f3d;
-    background: #e1d4c9;
-    border-color: #e1d4c9;
+    background: var(--text-light);
+    border-color: var(--text-light);
+  }
+
+  body.dark .socials__link:hover {
+    background: var(--border-light);
+    border-color: var(--border-light);
   }
 
 
