@@ -127,10 +127,16 @@ em {
 /* --- HEADER --- */
 
 .header {
-  padding: 20px 40px;
+  padding: 20px 0;
 }
 
 .header__container {
+  width: 100%;
+  max-width: 1360px;
+
+  margin: 0 auto;
+  padding-inline: 40px;
+
   min-height: 60px;
 
   display: flex;
@@ -288,6 +294,47 @@ body.dark .theme-icon--dark {
   height: 8px;
 }
 
+/* Mobile menu hidden by default */
+
+.mobile-menu {
+  display: none;
+}
+
+/* Burger icons: depends on theme + open/closed state */
+
+/* Hide all burger images first */
+body .burger .burger__open,
+body .burger .burger__close {
+  display: none;
+}
+
+
+/* Light theme + menu closed */
+body:not(.dark):not(.menu-open)
+.burger .burger__open.theme-icon--light {
+  display: block;
+}
+
+
+/* Dark theme + menu closed */
+body.dark:not(.menu-open)
+.burger .burger__open.theme-icon--dark {
+  display: block;
+}
+
+
+/* Light theme + menu open */
+body:not(.dark).menu-open
+.burger .burger__close.theme-icon--light {
+  display: block;
+}
+
+
+/* Dark theme + menu open */
+body.dark.menu-open
+.burger .burger__close.theme-icon--dark {
+  display: block;
+}
 
 /* --- HERO --- */
 
@@ -744,10 +791,69 @@ body.dark .theme-icon--dark {
     border-color 0.2s ease;
 }
 
+.mobile-menu {
+  display: none;
+}
 
 /* --- TABLET --- */
 
 @media (max-width: 768px) {
+
+  /* Mobile menu */
+
+  body.menu-open .mobile-menu {
+    display: flex;
+  }
+
+  .mobile-menu {
+    width: 100%;
+
+    padding: 60px 16px;
+
+    flex-direction: column;
+    align-items: center;
+
+    gap: 100px;
+
+    background: var(--background);
+  }
+
+  .mobile-menu__nav {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 60px;
+  }
+
+  .mobile-menu__nav a {
+    width: 100%;
+
+    text-align: center;
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .mobile-menu__menu-link {
+    display: flex;
+    align-items: center;
+
+    gap: 16px;
+
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 1.25;
+  }
+
+  .mobile-menu__menu-link img {
+    width: 40px;
+    height: 40px;
+  }
+
 
   /* Header */
 
@@ -812,16 +918,18 @@ body.dark .theme-icon--dark {
   .contacts__info {
     max-width: none;
   }
-
 }
 
 
 /* MOBILE */
 
 @media (max-width: 600px) {
-
-  .header {
+    
+  .header__container {
     padding-inline: 16px;
+  }
+  .header__actions {
+    gap: 12px;
   }
 
   main > section {

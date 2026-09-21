@@ -26,14 +26,12 @@
     <div class="container header__container">
 
 <a href="./" class="logo" aria-label="Coffee House home">
-  <img
-    class="logo__light"
+  <img class="logo__light"
     src="assets/icons/logo_light.svg"
     alt="Resource Coffee House"
   >
 
-  <img
-    class="logo__dark"
+  <img class="logo__dark"
     src="assets/icons/logo_dark.svg"
     alt=""
   >
@@ -100,12 +98,21 @@
           type="button"
           aria-label="Open navigation menu"
         >
-          <img class="theme-icon--light"
+          <img class="burger__open theme-icon--light"
             src="assets/icons/burger-menu.svg"
             alt=""
           >
-          <img class="theme-icon--dark"
+          <img class="burger__open theme-icon--dark"
             src="assets/icons/burger-menu-dark.svg"
+            alt=""
+          >
+
+            <img class="burger__close theme-icon--light"
+    src="assets/icons/close-burger.svg"
+    alt=""
+  >
+  <img class="burger__close theme-icon--dark"
+            src="assets/icons/close-burger-dark.svg"
             alt=""
           >
         </button>
@@ -113,6 +120,33 @@
       </div>
 
     </div>
+
+      <!-- Mobile menu -->
+
+            <div class="mobile-menu">
+
+  <nav class="mobile-menu__nav">
+    <a href="#favorite-coffee">Favorite coffee</a>
+    <a href="#about">About</a>
+    <a href="#mobile-app">Mobile app</a>
+    <a href="#contacts">Contact us</a>
+  </nav>
+
+  <a href="menu/" class="mobile-menu__menu-link">
+    <span>Menu</span>
+
+    <img class="theme-icon--light"
+      src="assets/icons/menu-coffee-cup.svg"
+      alt=""
+    >
+
+      <img class="theme-icon--dark"
+      src="assets/icons/menu-coffee-cup-dark.svg"
+      alt=""
+    >
+  </a>
+
+</div>
   </header>
 
 
@@ -550,6 +584,7 @@
   </footer>
 
 <script src="assets/js/theme.js"></script>
+<script src="assets/js/main.js"></script>
 
 </body>
 </html>
