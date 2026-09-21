@@ -59,6 +59,11 @@
   line-height: 1.5;
 }
 
+body.dark .menu-tab {
+  border-color: #665f55;
+  color: #e1d4c9;
+}
+
 .menu-tab__icon {
   width: 30px;
   height: 30px;
@@ -74,6 +79,10 @@
 
   font-size: 16px;
   line-height: 1;
+}
+
+body.dark .menu-tab__icon {
+  background: #665f55;
 }
 
 /* Active tab */
