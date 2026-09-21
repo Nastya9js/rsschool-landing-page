@@ -68,11 +68,13 @@
           aria-label="Switch color theme"
         >
           <span class="theme-switch__option theme-switch__option--light">
-            <img src="assets/icons/sun.svg" alt="">
+            <img class="theme-icon--light" src="assets/icons/sun.svg" alt="">
+            <img class="theme-icon--dark" src="assets/icons/sun-dark.svg" alt="">
           </span>
 
           <span class="theme-switch__option theme-switch__option--dark">
-            <img src="assets/icons/moon.svg" alt="">
+            <img class="theme-icon--light" src="assets/icons/moon.svg" alt="">
+            <img class="theme-icon--dark" src="assets/icons/moon-dark.svg" alt="">
           </span>
         </button>
 
@@ -81,8 +83,12 @@
         <a href="menu/" class="menu-link">
           <span>Menu</span>
 
-          <img
+          <img class="theme-icon--light"
             src="assets/icons/menu-coffee-cup.svg"
+            alt=""
+          >
+          <img class="theme-icon--dark"
+            src="assets/icons/menu-coffee-cup-dark.svg"
             alt=""
           >
         </a>
@@ -94,8 +100,12 @@
           type="button"
           aria-label="Open navigation menu"
         >
-          <img
+          <img class="theme-icon--light"
             src="assets/icons/burger-menu.svg"
+            alt=""
+          >
+          <img class="theme-icon--dark"
+            src="assets/icons/burger-menu-dark.svg"
             alt=""
           >
         </button>
@@ -156,8 +166,12 @@
             type="button"
             aria-label="Previous coffee"
           >
-            <img
+            <img class="theme-icon--light"
               src="assets/icons/arrow-left.svg"
+              alt=""
+            >
+            <img class="theme-icon--dark"
+              src="assets/icons/arrow-left-dark.svg"
               alt=""
             >
           </button>
@@ -244,8 +258,12 @@
             type="button"
             aria-label="Next coffee"
           >
-            <img
+            <img class="theme-icon--light"
               src="assets/icons/arrow-right.svg"
+              alt=""
+            >
+            <img class="theme-icon--dark"
+              src="assets/icons/arrow-right-dark.svg"
               alt=""
             >
           </button>
@@ -254,7 +272,7 @@
 
 
         <div class="slider__controls">
-          <span class="slider__control slider__control--active"></span>
+          <span class="slider__control slider__control--active"></span> 
           <span class="slider__control"></span>
           <span class="slider__control"></span>
         </div>
@@ -354,9 +372,14 @@
               class="store-button"
               href="#"
             >
-              <img
+              <img class="theme-icon--light"
                 class="store-button__icon"
                 src="assets/icons/apple.svg"
+                alt=""
+              >
+              <img
+                class="store-button__icon theme-icon--dark"
+                src="assets/icons/apple-dark.svg"
                 alt=""
               >
 
@@ -371,9 +394,15 @@
               class="store-button"
               href="#"
             >
-              <img
+              <img class="theme-icon--light"
                 class="store-button__icon"
                 src="assets/icons/play.svg"
+                alt=""
+              >
+
+              <img class="theme-icon--dark"
+                class="store-button__icon theme-icon--dark"
+                src="assets/icons/play-dark.svg"
                 alt=""
               >
 
@@ -520,7 +549,7 @@
 
   </footer>
 
-  <!-- <script src="assets/js/theme.js"></script> -->
+<script src="assets/js/theme.js"></script>
 
 </body>
 </html>
