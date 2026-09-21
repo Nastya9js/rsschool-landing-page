@@ -1017,6 +1017,30 @@ body.dark .theme-switch__moon-dark {
 
 @media (max-width: 768px) {
 
+  /* Theme switcher - ensure only active icons show on tablet */
+  .theme-switch__sun-hover,
+  .theme-switch__sun-dark-hover,
+  .theme-switch__moon-hover,
+  .theme-switch__sun-dark,
+  .theme-switch__moon-dark {
+    display: none !important;
+  }
+
+  body:not(.dark) .theme-switch__sun-light,
+  body:not(.dark) .theme-switch__moon-light {
+    display: block !important;
+  }
+
+  body.dark .theme-switch__sun-light,
+  body.dark .theme-switch__moon-light {
+    display: none !important;
+  }
+
+  body.dark .theme-switch__sun-dark,
+  body.dark .theme-switch__moon-dark {
+    display: block !important;
+  }
+
   /* Mobile menu */
 
   body.menu-open .mobile-menu {
@@ -1148,6 +1172,30 @@ body.dark .theme-switch__moon-dark {
   }
   .header__actions {
     gap: 12px;
+  }
+
+  /* Theme switcher - ensure only active icons show on mobile */
+  .theme-switch__sun-hover,
+  .theme-switch__sun-dark-hover,
+  .theme-switch__moon-hover,
+  .theme-switch__sun-dark,
+  .theme-switch__moon-dark {
+    display: none !important;
+  }
+
+  body:not(.dark) .theme-switch__sun-light,
+  body:not(.dark) .theme-switch__moon-light {
+    display: block !important;
+  }
+
+  body.dark .theme-switch__sun-light,
+  body.dark .theme-switch__moon-light {
+    display: none !important;
+  }
+
+  body.dark .theme-switch__sun-dark,
+  body.dark .theme-switch__moon-dark {
+    display: block !important;
   }
 
   main > section {
