@@ -60,22 +60,51 @@
       <div class="header__actions">
 
         <!-- Theme switch -->
-        <button
-          class="theme-switch"
-          type="button"
-          aria-label="Switch color theme"
-        >
-          <span class="theme-switch__option theme-switch__option--light">
-            <img class="theme-icon--light" src="assets/icons/sun.svg" alt="">
-            <img class="theme-icon--dark" src="assets/icons/sun-dark.svg" alt="">
-          </span>
+  <button
+  class="theme-switch"
+  type="button"
+  aria-label="Switch color theme"
+>
+  <span class="theme-switch__option theme-switch__option--light">
+    <img
+      class="theme-switch__sun-light"
+      src="assets/icons/sun.svg"
+      alt=""
+    >
 
-          <span class="theme-switch__option theme-switch__option--dark">
-            <img class="theme-icon--light" src="assets/icons/moon.svg" alt="">
-            <img class="theme-icon--dark" src="assets/icons/moon-dark.svg" alt="">
-          </span>
-        </button>
+      <img
+      class="theme-switch__sun-dark-hover"
+      src="assets/icons/sun-dark-hover.svg"
+      alt=""
+    >
 
+    <img
+      class="theme-switch__sun-dark"
+      src="assets/icons/sun-dark.svg"
+      alt=""
+    >
+  </span>
+
+  <span class="theme-switch__option theme-switch__option--dark">
+    <img
+      class="theme-switch__moon-light"
+      src="assets/icons/moon.svg"
+      alt=""
+    >
+
+    <img
+      class="theme-switch__moon-hover"
+      src="assets/icons/moon-dark-hoover.svg"
+      alt=""
+    >
+
+    <img
+      class="theme-switch__moon-dark"
+      src="assets/icons/moon-dark.svg"
+      alt=""
+    >
+  </span>
+</button>
 
         <!-- Link to Menu page -->
         <a href="menu/" class="menu-link">
@@ -171,6 +200,8 @@
 
           <a href="menu/" class="hero__button">
             Menu
+            <img class="hero__button-icon theme-icon--light" src="assets/icons/menu-coffee-cup.svg" alt="">
+            <img class="hero__button-icon theme-icon--dark" src="assets/icons/menu-coffee-cup-dark.svg" alt="">
           </a>
 
         </div>
@@ -406,8 +437,7 @@
               class="store-button"
               href="#"
             >
-              <img class="theme-icon--light"
-                class="store-button__icon"
+              <img class="store-button__icon theme-icon--light"
                 src="assets/icons/apple.svg"
                 alt=""
               >
@@ -428,14 +458,12 @@
               class="store-button"
               href="#"
             >
-              <img class="theme-icon--light"
-                class="store-button__icon"
+              <img class="store-button__icon theme-icon--light"
                 src="assets/icons/play.svg"
                 alt=""
               >
 
-              <img class="theme-icon--dark"
-                class="store-button__icon theme-icon--dark"
+              <img class="store-button__icon theme-icon--dark"
                 src="assets/icons/play-dark.svg"
                 alt=""
               >
@@ -489,7 +517,7 @@
             href="https://www.twitter.com/"
             aria-label="Twitter"
           >
-            <img
+          <img class="socials__icon socials__icon--twitter"
               src="assets/icons/twitter.svg"
               alt=""
             >
@@ -500,7 +528,8 @@
             href="https://www.instagram.com/"
             aria-label="Instagram"
           >
-            <img
+            <span class="socials__icon socials__icon--instagram" aria-hidden="true"></span>
+                        <img
               src="assets/icons/instagram.svg"
               alt=""
             >
@@ -511,10 +540,7 @@
             href="https://www.facebook.com/"
             aria-label="Facebook"
           >
-            <img
-              src="assets/icons/facebook.svg"
-              alt=""
-            >
+            <span class="socials__icon socials__icon--facebook" aria-hidden="true"></span>
           </a>
 
         </div>
