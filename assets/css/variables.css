@@ -1,0 +1,56 @@
+:root {
+  --background: #e1d4c9;
+
+  --text-dark: #403f3d;
+  --text-light: #e1d4c9;
+
+  --accent: #b0907a;
+
+  --border-light: #c1b6ad;
+  --background-container: #665f55;
+
+  --slider-control-active: #665f55;
+  --slider-control-inactive: #c1b6ad;
+
+  --interactive-border: #665f55;
+  --interactive-hover-bg: #665f55;
+  --interactive-hover-text: #e1d4c9;
+
+  --theme-switch-border: #c1b6ad;
+  --theme-switch-border-hover: #665f55;
+
+  --container-width: 1360px;
+
+  --border-radius-large: 4rem;
+  --border-radius-medium: 2rem;
+  --border-radius-round: 10rem;
+
+  --spacing-xs: 0.8rem;
+  --spacing-sm: 1.6rem;
+  --spacing-md: 4rem;
+  --spacing-lg: 6rem;
+  --spacing-xl: 10rem;
+
+  --section-padding-inline: 4rem;
+  --section-padding-inline-mobile: 1.6rem;
+}
+
+body.dark {
+  --background: #292826;
+
+  --text-dark: #e1d4c9;
+  --text-light: #e1d4c9;
+
+  --border-light: #665f55;
+  --background-container: #403f3d;
+
+  --slider-control-active: #c1b6ad;
+  --slider-control-inactive: #665f55;
+
+  --interactive-border: #c1b6ad;
+  --interactive-hover-bg: #c1b6ad;
+  --interactive-hover-text: #403f3d;
+
+  --theme-switch-border: #665f55;
+  --theme-switch-border-hover: #c1b6ad;
+}
