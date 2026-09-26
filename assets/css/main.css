@@ -107,23 +107,30 @@ body.dark .hero__button {
   color: var(--text-light);
 }
 
-.hero__button .hero__button-icon {
-  display: none;
-  width: 20px;
-  height: 20px;
-}
-
-body.dark .hero__button .hero__button-icon.theme-icon--dark {
-  display: none;
+.hero__button-icon {
+  display: block;
+  height: 2rem;
+  width: 0;
+  transform: scaleX(0);
+  background-color: currentColor;
+  -webkit-mask: url(../icons/menu-coffee-cup.svg) center / contain no-repeat;
+  mask: url(../icons/menu-coffee-cup.svg) center / contain no-repeat;
+  transition: width 0.3s ease-in-out, margin-left 0.3s ease-in-out, transform 0.3s ease-in-out;
 }
 
 @media (hover: hover) and (pointer: fine) {
-  body:not(.dark) .hero__button:hover .hero__button-icon.theme-icon--light {
-    display: block;
+  .hero__button:hover .hero__button-icon {
+    width: 2rem;
+    margin-left: 0.8rem;
+    transform: scaleX(1);
   }
+}
 
-  body.dark .hero__button:hover .hero__button-icon.theme-icon--dark {
-    display: block;
+@media (hover: none) and (pointer: coarse) {
+  .hero__button-icon {
+    width: 2rem;
+    margin-left: 0.8rem;
+    transform: scaleX(1);
   }
 }
 
