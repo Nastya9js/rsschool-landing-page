@@ -223,31 +223,16 @@ body.dark .menu-tab__icon {
   border-radius: 50%;
 }
 
-.menu-more img {
-  width: 24px;
-  height: 24px;
+.menu-more .icon {
+  width: 2.4rem;
+  height: 2.4rem;
 }
 
 @media (hover: hover) and (pointer: fine) {
   .menu-more:hover {
     background: var(--interactive-hover-bg);
     border-color: var(--interactive-hover-bg);
-  }
-
-  body:not(.dark) .menu-more:hover .theme-icon--light {
-    display: none;
-  }
-
-  body:not(.dark) .menu-more:hover .theme-icon--dark {
-    display: block;
-  }
-
-  body.dark .menu-more:hover .theme-icon--dark {
-    display: none;
-  }
-
-  body.dark .menu-more:hover .theme-icon--light {
-    display: block;
+    color: var(--text-light);
   }
 }
 
