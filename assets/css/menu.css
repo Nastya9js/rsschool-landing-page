@@ -324,4 +324,27 @@ body.dark .menu-tab__icon {
     width: 310px;
     max-width: 100%;
   }
+
+  /* Mobile pagination: hide coffee items 5-8 by default */
+  .menu-card[data-product="coffee-5"],
+  .menu-card[data-product="coffee-6"],
+  .menu-card[data-product="coffee-7"],
+  .menu-card[data-product="coffee-8"] {
+    display: none;
+  }
+
+  /* Show second page when pagination state is active */
+  .menu-grid.menu-grid--page-1 .menu-card[data-product="coffee-1"],
+  .menu-grid.menu-grid--page-1 .menu-card[data-product="coffee-2"],
+  .menu-grid.menu-grid--page-1 .menu-card[data-product="coffee-3"],
+  .menu-grid.menu-grid--page-1 .menu-card[data-product="coffee-4"] {
+    display: none;
+  }
+
+  .menu-grid.menu-grid--page-1 .menu-card[data-product="coffee-5"],
+  .menu-grid.menu-grid--page-1 .menu-card[data-product="coffee-6"],
+  .menu-grid.menu-grid--page-1 .menu-card[data-product="coffee-7"],
+  .menu-grid.menu-grid--page-1 .menu-card[data-product="coffee-8"] {
+    display: grid;
+  }
 }
